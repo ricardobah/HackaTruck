@@ -44,7 +44,7 @@ if resposta == 14 {
 
 
 
-
+/*
  let 😎 = ("Swift","C++","C#","Swift","fortran")
  let 💩 = ("Swift","C++","C#","Swift","fortran")
  print(😎.0)
@@ -59,79 +59,5 @@ if resposta == 14 {
  
  }
  
-
-var filme = (nome: "Jurassic Park", ano: 1993, director: "Steven Spielbert", IMDB: 8.1)
-print("\(filme.nome) estreou em \(filme.1)")
-
-
-
-var 👹 = ["Thomas", "Adailton"]
-// 1. Adicione um novo nome no array
-👹.append("JavaScript")
-
-// 2. Descubra a posição do nome Lucas
-👹.index(of: "Thomas")
-// 3. Remova o nome Lucas
-👹.remove(at: 1)
-// 4. Ordene o array em ordem alfabética
-👹.append("Abb")
-👹.sort()
-
-
-var asd  = 10
-
-switch(asd){
-case 10:
-    print(asd)
-case 1...9:
-    print("mi")
-default:
-    print("Nada")
-}
-
-
-print("For1")
-for numero in 1...3 {
-    print(numero)
-}
-print("For2")
-for numero in 1..<3 {
-    print(numero)
-}
-
-print("For3")
-for numero in (1...3).reversed() {
-    print(numero)
-}
-
-// Modificando o passo
-print("For4")
-for numero in stride(from: 1, to: 8, by: 2) {
-    print(numero)
-}
-
-
-var numero = 0
-
-while numero <= 6 {
-    numero += 1
-    print(numero)
-}
-
-
-repeat {
-    print("Pelo menos uma vez", terminator: ".")
-} while false
-
-
-enum Side: String {
-    case L = "Light"
-    case D = "Dark"
-}
-
-enum Status: Int {
-    case Ativo = 0
-    case Inativo = 1
-    case Bloqueado = 2
-}
+ */
 
