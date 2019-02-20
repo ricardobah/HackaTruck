@@ -268,3 +268,58 @@ let thiago: Pessoa = Pessoa(nome: "Thiago", sobrenome: "Pereira", idade: 28, esp
 iniciarTriatlo(pessoa: thiago)
 
 
+
+//atv
+
+
+
+protocol Diesel {
+    var quantidadeDeCombustível: Int { get set }
+    
+    func injetarArAquecido() -> Void
+    func injetarCombustívelSobPressão() -> Void
+}
+
+protocol Gasolina {
+    var quantidadeDeCombustível: Int { get set }
+    
+    func ativarVela() -> Void
+    func injetarCombustívelComAr() -> Void
+}
+
+class MotorDeCarro : Gasolina {
+    
+    var quantidadeDeCombustível: Int = 0
+    func ativarVela(){
+        print("ativou")
+    }
+
+    func injetarCombustívelComAr() -> Void{
+     print("ativou")
+    }
+}
+
+class MotorDeCaminhão : Diesel {
+    
+    
+    var quantidadeDeCombustível: Int = 0
+  /*  init(var a)
+    {
+        self.quantidadeDeCombustível = a
+    }*/
+    func injetarArAquecido() -> Void{
+        print("ativou")
+    }
+    
+    func injetarCombustívelSobPressão() -> Void{
+         print("ativou")
+    }
+
+}
+
+
+
+
+
+
+
