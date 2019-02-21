@@ -81,14 +81,16 @@ class MaquinaDeKaraoke {
     func removeMusica(nome : String){
         
        
-            musicas.remove(at: Int(musicas.index(of: nome)))
+            musicas.remove(at: Int(musicas.index(of: nome)!))
         
     }
 
 }
 
 
+MaquinaDeKaraoke a
 
+getMusicas()
 
 
 
