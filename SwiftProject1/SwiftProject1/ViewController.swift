@@ -9,6 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var Label1: UITextField!
+    @IBOutlet weak var Label2: UITextField!
+    @IBOutlet weak var Label3: UITextField!
+    @IBOutlet weak var TextView: UITextView!
+    @IBAction func Save(_ sender: UIButton) {
+        makeNotes()
+    }
+    
+    func makeNotes() -> Void{
+        TextView.text = "Notes: " + Label1.text! + " " + Label2.text! + " " + Label3.text!
+    
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
