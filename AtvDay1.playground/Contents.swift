@@ -88,9 +88,13 @@ class MaquinaDeKaraoke {
 }
 
 
-MaquinaDeKaraoke a
-
-getMusicas()
+var a = MaquinaDeKaraoke()
+a.addMusica(nome: "fear of the dark")
+a.addMusica(nome: "the trooper")
+a.addMusica(nome: "Snow")
+a.getMusicas()
+a.removeMusica(nome: "Snow")
+a.getMusicas()
 
 
 
