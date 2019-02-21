@@ -98,3 +98,15 @@ a.getMusicas()
 
 
 
+//atv 4
+
+var array = [2,4,1,3,6,4,7]
+array.sort()
+var auxiliar = array[0]
+for c in 0...array.count{
+    
+
+
+}
+
+array
