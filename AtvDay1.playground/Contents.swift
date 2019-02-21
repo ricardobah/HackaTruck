@@ -33,7 +33,7 @@ print("")
 //q2
 
 func isArmstrong(numero : Int ){
-    var _length = String(numero).characters.count
+    let _length = String(numero).characters.count
     var num = numero
     var count = 0
     while(num > 0){
@@ -49,4 +49,46 @@ func isArmstrong(numero : Int ){
 
 
 isArmstrong(numero:153)
+
+
+
+
+//q3
+
+
+/*Escreva uma classe "MaquinaDeKaraoke" contendo um método “InsereMusica”, que insira músicas em uma lista, e outro método “RemoveMusica", que remova a música passada como argumento para o método.*/
+
+
+
+
+
+
+class MaquinaDeKaraoke {
+
+    var musicas : [String] = []
+    
+    
+    func getMusicas() -> Void {
+        print(musicas)
+        
+    
+    }
+    
+    func addMusica(nome : String) -> Void{
+        musicas.append(nome)
+    }
+    
+    func removeMusica(nome : String){
+        
+       
+            musicas.remove(at: Int(musicas.index(of: nome)))
+        
+    }
+
+}
+
+
+
+
+
 
