@@ -38,7 +38,7 @@ class dbAnimal{
 
     static func getAnimal() -> [Animal]{
     
-        return[
+        return [
         
             Animal(nome: "Leo", especie: "Gado", nomeDaFoto: "1"),
             Animal(nome: "Thomas", especie: "Camelo", nomeDaFoto: "2"),

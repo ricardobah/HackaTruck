@@ -38,15 +38,20 @@ class AnimalsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //monta celula
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "animalIdentifier", for: indexPath)
 
-        if let animalCell = cell as? AnimalTableViewCell{}
+        if let animalCell = cell as? AnimalTableViewCell{
 
-        let animal = animais[indexPath.row]
+            let animal = animais[indexPath.row]
+            
+            animalCell.nameAtual.text = animal.nome
+            animalCell.especieAtual.text = animal.especie
+            animalCell.imagemAtual.image = UIImage(named: animal.nomeDafoto)
+            
+        }
+    
         
-     animalCell.animalAtual.text = animal.nome
-        animalCell.especieAtual.text = animal.especie
-        
+
         return cell
     }
  

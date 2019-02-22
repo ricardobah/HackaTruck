@@ -11,9 +11,10 @@ import UIKit
 class AnimalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameAtual: UILabel!
+   
     @IBOutlet weak var especieAtual: UILabel!
     
-    
+    @IBOutlet weak var imagemAtual: UIImageView!
     
 
 }
