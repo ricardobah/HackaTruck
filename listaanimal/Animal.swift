@@ -29,3 +29,30 @@ class Animal {
 
 
 }
+
+
+
+
+
+class dbAnimal{
+
+    static func getAnimal() -> [Animal]{
+    
+        return[
+        
+            Animal(nome: "Leo", especie: "Gado", nomeDaFoto: "1"),
+            Animal(nome: "Thomas", especie: "Camelo", nomeDaFoto: "2"),
+            Animal(nome: "Bessa", especie: "Cangurivis", nomeDaFoto: "3"),
+            Animal(nome: "Caiohhhh:", especie: "Piriquito", nomeDaFoto: "4"),
+            Animal(nome: "Serva", especie: "Cirne", nomeDaFoto: "5")
+            
+        
+        
+        ]
+    }
+
+
+
+
+
+}
