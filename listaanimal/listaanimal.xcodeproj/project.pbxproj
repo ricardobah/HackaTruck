@@ -13,6 +13,7 @@
 		3FDD49B22220A4300092E29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDD49B02220A4300092E29F /* LaunchScreen.storyboard */; };
 		3FDD49BC2220A5990092E29F /* AnimalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD49BB2220A5990092E29F /* AnimalsTableViewController.swift */; };
 		3FDD49BE2220A5D50092E29F /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD49BD2220A5D50092E29F /* Animal.swift */; };
+		3FDD49C02220AB2D0092E29F /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD49BF2220AB2D0092E29F /* AnimalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3FDD49B32220A4300092E29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDD49BB2220A5990092E29F /* AnimalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewController.swift; sourceTree = "<group>"; };
 		3FDD49BD2220A5D50092E29F /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		3FDD49BF2220AB2D0092E29F /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				3FDD49BB2220A5990092E29F /* AnimalsTableViewController.swift */,
+				3FDD49BF2220AB2D0092E29F /* AnimalTableViewCell.swift */,
 				3FDD49BD2220A5D50092E29F /* Animal.swift */,
 				3FDD49A62220A4300092E29F /* listaanimal */,
 				3FDD49A52220A4300092E29F /* Products */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDD49BC2220A5990092E29F /* AnimalsTableViewController.swift in Sources */,
+				3FDD49C02220AB2D0092E29F /* AnimalTableViewCell.swift in Sources */,
 				3FDD49A82220A4300092E29F /* AppDelegate.swift in Sources */,
 				3FDD49BE2220A5D50092E29F /* Animal.swift in Sources */,
 			);
