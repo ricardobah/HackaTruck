@@ -40,8 +40,13 @@ class AnimalsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //monta celula
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        if let animalCell = cell as? AnimalTableViewCell{}
 
+        let animal = animais[indexPath.row]
+        
+     animalCell.animalAtual.text = animal.nome
+        animalCell.especieAtual.text = animal.especie
+        
         return cell
     }
  
