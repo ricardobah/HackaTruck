@@ -9,15 +9,42 @@
 import Foundation
 
 class Podcast{
+/*
+ 99vidas
+     canal42
+     mm
+     naoouvo
+     nerdcast
+     ompdb
+     rapaduracast
+     reloading
+     scicast
+     
+ */
 
-
-    let nome : String
+    let name : String
     let status : String
     let image : String
     
-    init (nome : String, status : String, image: String)
-
-
-
+    init (name : String, status : String, image: String){
+        self.name = name
+        self.status = status
+        self.image = image
+    }
 }
 
+
+
+class dbPodcast{
+
+    static func getPodcast() -> [Podcast]{
+    
+        return[
+            Podcast(name: "canal42", status: "No unplayed episodes", image: "canal42")
+        
+        
+        
+        
+        ]
+    }
+}
