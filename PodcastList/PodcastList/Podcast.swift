@@ -11,7 +11,11 @@ import Foundation
 class Podcast{
 
 
-
+    let nome : String
+    let status : String
+    let image : String
+    
+    init (nome : String, status : String, image: String)
 
 
 
