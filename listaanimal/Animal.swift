@@ -14,7 +14,18 @@ import Foundation
 class Animal {
 
 
-
+    let nome: String
+    let especie: String
+    
+    let nomeDafoto: String
+    
+    
+    init(nome: String, especie: String, nomeDaFoto: String){
+        self.nome = nome
+        self.especie = especie
+        self.nomeDafoto = nomeDaFoto
+    
+    }
 
 
 }
