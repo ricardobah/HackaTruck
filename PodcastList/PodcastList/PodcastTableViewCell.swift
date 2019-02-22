@@ -10,15 +10,10 @@ import UIKit
 
 class PodcastTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var Status: UILabel!
+    @IBOutlet weak var podcastImage: UIImageView!
+   
+  
 
 }

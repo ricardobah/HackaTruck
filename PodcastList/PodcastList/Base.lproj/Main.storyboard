@@ -53,6 +53,12 @@
                                         </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Image" destination="KH8-81-ySt" id="4VG-VS-fEl"/>
+                                    <outlet property="Name" destination="klC-GH-eAW" id="o6I-Vt-7fG"/>
+                                    <outlet property="Status" destination="Z3K-5L-tki" id="YqR-ax-m8w"/>
+                                    <outlet property="podcastImage" destination="KH8-81-ySt" id="qQM-We-ih7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
