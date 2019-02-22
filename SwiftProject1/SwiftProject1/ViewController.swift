@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     func makeNotes() -> Void{
-        TextView.text = "Notes: " + Label1.text! + " " + Label2.text! + " " + Label3.text!
+        TextView.text = " Notes: " + Label1.text! + " " + Label2.text! + " " + Label3.text!
     
     }
     
