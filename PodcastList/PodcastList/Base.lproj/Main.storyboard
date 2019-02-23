@@ -18,9 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="m3U-k2-qiw">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="kMQ-gW-nGz" id="YdW-eK-yZZ"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="podcastIdentifier" rowHeight="229" id="MR2-Xu-6L7" customClass="PodcastTableViewCell" customModule="PodcastList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="229"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="229"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MR2-Xu-6L7" id="p8o-lO-IhE">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
@@ -73,8 +81,29 @@
                             <outlet property="delegate" destination="kMQ-gW-nGz" id="5oL-A6-XOa"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBarPodcast" destination="m3U-k2-qiw" id="av3-mi-gcB"/>
+                        <outlet property="searchDisplayController" destination="xst-ED-DNn" id="0KJ-XA-s2I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YG-dk-Ktj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8Nd-Rq-CNm">
+                    <connections>
+                        <outlet property="delegate" destination="kMQ-gW-nGz" id="eGJ-6T-aIj"/>
+                        <outlet property="searchContentsController" destination="kMQ-gW-nGz" id="pvB-cj-Lpe"/>
+                        <outlet property="searchResultsDataSource" destination="kMQ-gW-nGz" id="fmA-Lu-aS0"/>
+                        <outlet property="searchResultsDelegate" destination="kMQ-gW-nGz" id="Phz-Ae-GCb"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="xst-ED-DNn">
+                    <connections>
+                        <outlet property="delegate" destination="kMQ-gW-nGz" id="OTF-Zh-zjS"/>
+                        <outlet property="searchBar" destination="m3U-k2-qiw" id="X7r-hw-d7b"/>
+                        <outlet property="searchContentsController" destination="kMQ-gW-nGz" id="mcY-Dn-iz5"/>
+                        <outlet property="searchResultsDataSource" destination="kMQ-gW-nGz" id="yVf-yg-IJy"/>
+                        <outlet property="searchResultsDelegate" destination="kMQ-gW-nGz" id="aCv-ki-mro"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="244" y="234.33283358320841"/>
         </scene>

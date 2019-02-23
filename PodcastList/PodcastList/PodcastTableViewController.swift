@@ -9,11 +9,28 @@
 import UIKit
 
 class PodcastTableViewController: UITableViewController {
-    var podcasts = [Podcast]()
     
+   
+    @IBOutlet weak var searchBarPodcast: UISearchBar!
+    
+    
+ 
+   
+    var podcasts = [Podcast]()
+    var filteredPodcasts = [Podcast]()
+    let searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         self.podcasts = dbPodcast.getPodcast()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Candies"
+       // navigationItem2.searchController = searchController
+        
+        definesPresentationContext = true
+        /*let header = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100))
+        
+        tableView.tableHeaderView = header*/
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +38,18 @@ class PodcastTableViewController: UITableViewController {
         
     }
 
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
     
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredPodcasts = podcasts.filter({( podcast : Podcast) -> Bool in
+            return  podcast.name.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
        
@@ -95,5 +123,18 @@ class PodcastTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
+
+
+
+extension PodcastTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+
