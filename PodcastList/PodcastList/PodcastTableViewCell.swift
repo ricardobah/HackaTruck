@@ -14,6 +14,7 @@ class PodcastTableViewCell: UITableViewCell {
     @IBOutlet weak var Status: UILabel!
     @IBOutlet weak var podcastImage: UIImageView!
    
+   
   
 
 }
