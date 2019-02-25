@@ -12,9 +12,6 @@ class PodcastTableViewController: UITableViewController {
     
    
     @IBOutlet weak var searchBarPodcast: UISearchBar!
-    
-    
- 
    
     var podcasts = [Podcast]()
     var filteredPodcasts = [Podcast]()
@@ -39,7 +36,7 @@ class PodcastTableViewController: UITableViewController {
     }
 
     func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
+        
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
