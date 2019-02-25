@@ -28,8 +28,12 @@ class RicardoViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier=="leo_eh_gado" {
+            if let novaView = segue.destination as? LeoViewController{
+                
+              //  novaView.leogado.text = textFd.text ERRADO PQ N INSTANCIOU
+                novaView.leogadocor = "aa"              }
+        }
     }
     
 

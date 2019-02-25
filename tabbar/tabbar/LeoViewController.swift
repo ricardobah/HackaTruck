@@ -10,10 +10,12 @@ import UIKit
 
 class LeoViewController: UIViewController {
     @IBOutlet weak var leogado: UILabel!
-
+    var leogadocor : String?
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-
+        leogado.text = leogadocor
+        
         // Do any additional setup after loading the view.
     }
 

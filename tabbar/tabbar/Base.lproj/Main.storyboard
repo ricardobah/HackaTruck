@@ -51,7 +51,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-Xm-rkQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-Xm-rkQ" userLabel="leogado">
                                 <rect key="frame" x="166" y="195" width="42" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" id="1aG-wd-KQN">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fHL-hm-D9s">
                             <connections>
-                                <segue destination="TFw-RM-wog" kind="show" id="emx-CH-4Ku"/>
+                                <segue destination="TFw-RM-wog" kind="show" identifier="leo_eh_gado" id="emx-CH-4Ku"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +102,7 @@
                                         <color key="backgroundColor" red="0.9991323352" green="0.96715626580000003" blue="0.17928185229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="rL6-nC-tui" kind="showDetail" id="y5Q-1t-VNm"/>
+                                            <segue destination="OCw-1g-A3g" kind="show" identifier="leo_eh_gado" id="GxV-ul-Lk1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -111,7 +111,7 @@
                                 <rect key="frame" x="16" y="291" width="343" height="257"/>
                                 <state key="normal" title="Button" backgroundImage="33038125_583227652058778_3410047356912009216_o"/>
                                 <connections>
-                                    <segue destination="gJs-AI-3qZ" kind="show" id="h2I-Dl-8qk"/>
+                                    <segue destination="gJs-AI-3qZ" kind="show" identifier="leo_eh_gado" id="h2I-Dl-8qk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,11 +126,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="y5P-5M-Prv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yHo-a9-0EX">
-                            <connections>
-                                <segue destination="gJs-AI-3qZ" kind="show" id="ksq-1M-gFH"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yHo-a9-0EX"/>
                     </navigationItem>
                     <connections>
                         <outlet property="textFd" destination="s17-FU-zoJ" id="stq-6W-YNP"/>
@@ -148,7 +144,7 @@
                         <viewControllerLayoutGuide type="top" id="d0D-5i-BHm"/>
                         <viewControllerLayoutGuide type="bottom" id="7Qh-sb-ok4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="psP-pM-754">
+                    <view key="view" contentMode="scaleToFill" id="psP-pM-754" customClass="Leo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -175,9 +171,6 @@
                                 <rect key="frame" x="164" y="348" width="46" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="rL6-nC-tui" kind="showDetail" id="k6e-Tg-py9"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.67076133100000002" blue="0.62197414429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -204,7 +197,6 @@
                     <connections>
                         <segue destination="g5d-Uw-jmg" kind="relationship" relationship="viewControllers" id="dih-tn-o9i"/>
                         <segue destination="L7j-bX-wgO" kind="relationship" relationship="viewControllers" id="4RK-Xd-0dC"/>
-                        <segue destination="rL6-nC-tui" kind="relationship" relationship="viewControllers" id="5Iw-ct-Nif"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfZ-ZA-mKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,32 +222,11 @@
             </objects>
             <point key="canvasLocation" x="78" y="-681"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iaU-E4-8Jf">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rL6-nC-tui" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="lO2-Cp-ono"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pye-ln-V2y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="OCw-1g-A3g" kind="relationship" relationship="rootViewController" id="qzH-RW-l4K"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SCd-dD-Zg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="77.599999999999994" y="124.58770614692655"/>
-        </scene>
     </scenes>
     <resources>
         <image name="33038125_583227652058778_3410047356912009216_o" width="1080" height="1075"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="emx-CH-4Ku"/>
-        <segue reference="y5Q-1t-VNm"/>
-        <segue reference="ksq-1M-gFH"/>
     </inferredMetricsTieBreakers>
 </document>
