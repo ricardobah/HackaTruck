@@ -11,6 +11,8 @@
 		3F1EF00D222494C4002C22BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EF00B222494C4002C22BA /* Main.storyboard */; };
 		3F1EF00F222494C4002C22BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EF00E222494C4002C22BA /* Assets.xcassets */; };
 		3F1EF012222494C4002C22BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1EF010222494C4002C22BA /* LaunchScreen.storyboard */; };
+		3F1EF01A22249C65002C22BA /* RicardoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EF01922249C65002C22BA /* RicardoViewController.swift */; };
+		3F1EF01C22249C83002C22BA /* LeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EF01B22249C83002C22BA /* LeoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		3F1EF00E222494C4002C22BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F1EF011222494C4002C22BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F1EF013222494C4002C22BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1EF01922249C65002C22BA /* RicardoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RicardoViewController.swift; sourceTree = "<group>"; };
+		3F1EF01B22249C83002C22BA /* LeoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				3F1EF007222494C4002C22BA /* AppDelegate.swift */,
 				3F1EF00B222494C4002C22BA /* Main.storyboard */,
+				3F1EF01922249C65002C22BA /* RicardoViewController.swift */,
+				3F1EF01B22249C83002C22BA /* LeoViewController.swift */,
 				3F1EF00E222494C4002C22BA /* Assets.xcassets */,
 				3F1EF010222494C4002C22BA /* LaunchScreen.storyboard */,
 				3F1EF013222494C4002C22BA /* Info.plist */,
@@ -133,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1EF01C22249C83002C22BA /* LeoViewController.swift in Sources */,
 				3F1EF008222494C4002C22BA /* AppDelegate.swift in Sources */,
+				3F1EF01A22249C65002C22BA /* RicardoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
