@@ -101,8 +101,8 @@ class CharacterTableViewController: UITableViewController {
             if let novaView = segue.destination as? InfoViewController{
                 
                 //  novaView.leogado.text = textFd.text ERRADO PQ N INSTANCIOU
-                let celula = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as? CharacterTableViewCell
-                novaView.charAtualName = celula?.name.titleLabel?.text
+                let celula = characters[tableView.indexPathForSelectedRow!.row]
+                novaView.atual = celula
             }
         }
 

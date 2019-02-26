@@ -12,19 +12,21 @@ class InfoViewController: UIViewController {
 
     
     
-    
     @IBOutlet weak var charImage: UIImageView!
+    
     @IBOutlet weak var charName: UILabel!
+   
     @IBOutlet weak var charFruit: UILabel!
     @IBOutlet weak var charFiliation: UILabel!
+    
     var img : String!
-    //UIImage(named: podcast.image)
+   
     var charAtualName : String?
     var atual : Character?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            atual = dbCharacteres.getByName(name: charAtualName!)
+            
             img = atual!.image
             charImage.image = UIImage(named: img)!
             charName.text = atual?.name
