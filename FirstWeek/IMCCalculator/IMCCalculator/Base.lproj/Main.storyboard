@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IMCCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="L6N-2I-34v" userLabel="Inputs">
+                                <rect key="frame" x="25" y="61" width="325" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Peso (Kg)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnR-2D-i1Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Altura (m)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="an2-gx-4Ad">
+                                        <rect key="frame" x="0.0" y="40" width="325" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="an2-gx-4Ad" firstAttribute="leading" secondItem="L6N-2I-34v" secondAttribute="leading" id="Uny-pZ-sJ4"/>
+                                    <constraint firstItem="OnR-2D-i1Q" firstAttribute="leading" secondItem="L6N-2I-34v" secondAttribute="leading" id="hlQ-1C-x4q"/>
+                                    <constraint firstAttribute="trailing" secondItem="an2-gx-4Ad" secondAttribute="trailing" id="sV1-6o-vOA"/>
+                                    <constraint firstAttribute="trailing" secondItem="OnR-2D-i1Q" secondAttribute="trailing" id="zTa-c9-N0R"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" text="Resultado" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y8x-KU-FXZ">
+                                <rect key="frame" x="25" y="218" width="325" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RvP-dJ-MNH"/>
+                                    <constraint firstAttribute="width" constant="325" id="VzQ-Nz-W37"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora de IMC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-km-2Zm">
+                                <rect key="frame" x="56" y="28" width="263" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNJ-B6-N6f">
+                                <rect key="frame" x="25" y="151" width="325" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47517639398574829" blue="0.99913233518600464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CALCULAR">
+                                    <color key="titleColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Calcular:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6IU-AQ-X7A"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tabela-imc" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-Bg-UWb">
+                                <rect key="frame" x="25" y="380" width="325" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="edu-qM-Nai"/>
+                                    <constraint firstAttribute="height" constant="195" id="y6X-gK-V05"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L6N-2I-34v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="1cV-qX-DLl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7JX-km-2Zm" secondAttribute="trailing" constant="40" id="FWW-xY-rtc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tac-Bg-UWb" secondAttribute="trailing" constant="25" id="IEl-RJ-Ttk"/>
+                            <constraint firstItem="Tac-Bg-UWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="K5v-YY-dLO"/>
+                            <constraint firstItem="7JX-km-2Zm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="OBy-jj-0SC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tac-Bg-UWb" secondAttribute="bottom" constant="15" id="Ozg-wf-yfu"/>
+                            <constraint firstItem="Y8x-KU-FXZ" firstAttribute="top" secondItem="eNJ-B6-N6f" secondAttribute="bottom" constant="21" id="Vs4-xE-zA0"/>
+                            <constraint firstItem="eNJ-B6-N6f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="XRV-iG-dsO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y8x-KU-FXZ" secondAttribute="trailing" constant="9" id="YXk-2c-wVd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tac-Bg-UWb" secondAttribute="trailing" constant="40" id="Yhk-G2-rl3"/>
+                            <constraint firstItem="eNJ-B6-N6f" firstAttribute="top" secondItem="L6N-2I-34v" secondAttribute="bottom" constant="17" id="fR9-wm-Hm5"/>
+                            <constraint firstItem="Y8x-KU-FXZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="ndH-Dx-NzX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6N-2I-34v" secondAttribute="trailing" constant="9" id="oVe-ZX-zKv"/>
+                            <constraint firstItem="L6N-2I-34v" firstAttribute="top" secondItem="7JX-km-2Zm" secondAttribute="bottom" constant="12.5" id="rmA-4G-J2T"/>
+                            <constraint firstItem="Tac-Bg-UWb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="sB6-8h-VWp"/>
+                            <constraint firstItem="7JX-km-2Zm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="x1y-ch-07S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Altura" destination="an2-gx-4Ad" id="fHQ-fN-5Na"/>
+                        <outlet property="Results" destination="Y8x-KU-FXZ" id="wig-tJ-6Rq"/>
+                        <outlet property="peso" destination="OnR-2D-i1Q" id="sJb-I5-BZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabela-imc" width="757" height="501"/>
+    </resources>
+</document>

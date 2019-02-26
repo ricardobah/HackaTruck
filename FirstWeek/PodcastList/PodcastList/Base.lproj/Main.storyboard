@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kMQ-gW-nGz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Podcast Table View Controller-->
+        <scene sceneID="sJi-m1-OA0">
+            <objects>
+                <tableViewController id="kMQ-gW-nGz" customClass="PodcastTableViewController" customModule="PodcastList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="229" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kic-Pj-qdn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="m3U-k2-qiw">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="kMQ-gW-nGz" id="YdW-eK-yZZ"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="podcastIdentifier" rowHeight="229" id="MR2-Xu-6L7" customClass="PodcastTableViewCell" customModule="PodcastList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="229"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MR2-Xu-6L7" id="p8o-lO-IhE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="228.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dzq-MQ-Pv6">
+                                            <rect key="frame" x="8" y="18" width="359" height="82"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tvK-Vl-LhK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="82"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A2U-hQ-TtL">
+                                                    <rect key="frame" x="93" y="0.0" width="266" height="82"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klC-GH-eAW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="266" height="41.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3K-5L-tki">
+                                                            <rect key="frame" x="0.0" y="61.5" width="266" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="A2U-hQ-TtL" firstAttribute="top" secondItem="dzq-MQ-Pv6" secondAttribute="top" id="Jr7-S5-z2u"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dzq-MQ-Pv6" firstAttribute="top" secondItem="p8o-lO-IhE" secondAttribute="topMargin" constant="10" id="Gko-pd-ags"/>
+                                        <constraint firstItem="dzq-MQ-Pv6" firstAttribute="leading" secondItem="p8o-lO-IhE" secondAttribute="leadingMargin" id="rDe-R9-ccK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dzq-MQ-Pv6" secondAttribute="trailing" id="vIb-ja-dFq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Name" destination="klC-GH-eAW" id="o6I-Vt-7fG"/>
+                                    <outlet property="Status" destination="Z3K-5L-tki" id="YqR-ax-m8w"/>
+                                    <outlet property="podcastImage" destination="tvK-Vl-LhK" id="642-lJ-Xcn"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kMQ-gW-nGz" id="80b-bz-wg0"/>
+                            <outlet property="delegate" destination="kMQ-gW-nGz" id="5oL-A6-XOa"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBarPodcast" destination="m3U-k2-qiw" id="av3-mi-gcB"/>
+                        <outlet property="searchDisplayController" destination="xst-ED-DNn" id="0KJ-XA-s2I"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8YG-dk-Ktj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="8Nd-Rq-CNm">
+                    <connections>
+                        <outlet property="delegate" destination="kMQ-gW-nGz" id="eGJ-6T-aIj"/>
+                        <outlet property="searchContentsController" destination="kMQ-gW-nGz" id="pvB-cj-Lpe"/>
+                        <outlet property="searchResultsDataSource" destination="kMQ-gW-nGz" id="fmA-Lu-aS0"/>
+                        <outlet property="searchResultsDelegate" destination="kMQ-gW-nGz" id="Phz-Ae-GCb"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="xst-ED-DNn">
+                    <connections>
+                        <outlet property="delegate" destination="kMQ-gW-nGz" id="OTF-Zh-zjS"/>
+                        <outlet property="searchBar" destination="m3U-k2-qiw" id="X7r-hw-d7b"/>
+                        <outlet property="searchContentsController" destination="kMQ-gW-nGz" id="mcY-Dn-iz5"/>
+                        <outlet property="searchResultsDataSource" destination="kMQ-gW-nGz" id="yVf-yg-IJy"/>
+                        <outlet property="searchResultsDelegate" destination="kMQ-gW-nGz" id="aCv-ki-mro"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="244" y="234.33283358320841"/>
+        </scene>
+    </scenes>
+</document>
