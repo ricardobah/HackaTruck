@@ -22,6 +22,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate {
         super.viewDidLoad()
         mapViewMapKit.showsUserLocation = true
         setupLocationManager()
+        addGesture()
     }
     
     
