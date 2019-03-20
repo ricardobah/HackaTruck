@@ -2,10 +2,7 @@
 const express = require('express')
 const routes = express.Router();
 
-const CharController = require("./controllers/sensorController")
-routes.get("/char", CharController.index)
-routes.post("/char", CharController.store)
-routes.get("/char/:id", CharController.show)
-routes.put("/char/:id", CharController.update)
-routes.delete("/char/:id", CharController.destroy)
+const SensorController = require("./controllers/sensorController")
+routes.get("/sensor", SensorController.index)
+routes.get("/sensor/:id", SensorController.show)
 module.exports = routes;
