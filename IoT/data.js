@@ -1,37 +1,30 @@
 
-sensorData= []
+// const cors = require("cors")
+
 var data    
-    request = new XMLHttpRequest();
-    request.open('GET', 'https://ricardoribeiroiot.mybluemix.net/getall', true);
-    request.onload = function () {
-        data = JSON.parse(this.response)
-        
-        if (request.status >= 200 && request.status < 400) {
-            data.forEach(users => {
-                console.log(request.status)
-                sensorData.push()
-            })
-        } else {
-            console.log('error')
-        }
-        
+var url = 'http://ricardoribeiroiot.mybluemix.net/getall'
+var body ='<?xml version="1.0" encoding="utf-8"?><configuration><system.webServer><httpProtocol><customHeaders>  <add name="Access-Control-Allow-Origin" value="*" /></customHeaders></httpProtocol></system.webServer></configuration>'
+request = new XMLHttpRequest();
+
+request.open('GET', url, true);
+var espaco = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+request.onload = function () {
+    console.log("azul")
+    data = JSON.parse(this.response)
+    console.log(data)
+    var i=0;
+    if (request.status >= 200 && request.status < 400) {
+        console.log(request.status)
+        data.forEach(dados => {
+            document.getElementById('data').innerHTML+=(espaco+data[i].d.temperatura+espaco+espaco+data[i].d.pressao+espaco+espaco+data[i].d.altitude+'<br/>')
+            i++;
+        })
+    } else {
+        console.log('error')
     }
     
-    
-    request.send()
-
-    
-    
-    
-    
-    getUsers = function(){
-    
-            
-            data.forEach(data => {
-                
-               
-              
-            })
-           
-        return sensorData;
 }
+
+
+request.send(body)
+
