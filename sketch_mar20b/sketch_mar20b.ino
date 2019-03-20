@@ -12,9 +12,9 @@ const char* password = "IOT2017IBM";
 
 
 //Atualize os valores de Org, device type, device id e token
-#define ORG "fft8od"
-#define DEVICE_TYPE "NODE-MCU"
-#define DEVICE_ID "node-mcu-planta"
+#define ORG "cdiwje"
+#define DEVICE_TYPE "nodemcu"
+#define DEVICE_ID "nodemcu16"
 #define TOKEN "12345678"
 
 
